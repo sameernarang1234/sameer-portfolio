@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sameer Narang — Full‑Stack Software Engineer</title>
+  <meta name="description" content="Portfolio of Sameer Rakesh Narang — full‑stack software engineer (IIT Roorkee) building real‑time fintech platforms, Rust microservices and cloud‑native web & mobile products." />
+  <meta name="theme-color" content="#05060d" />
+  <meta property="og:title" content="Sameer Narang — Full‑Stack Software Engineer" />
+  <meta property="og:description" content="Real‑time fintech dashboards, Rust microservices, KYC/KYB onboarding, Flutter & React products." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%232ee6c5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2305060d'/%3E%3Cpath d='M40 22c-2-5-8-7-13-5s-6 8-1 11l9 5c5 3 4 9-1 11s-11 0-13-5' fill='none' stroke='url(%23g)' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
+</head>
+<body class="is-loading">
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="pre-inner">
+      <div class="pre-name"><span>Sameer</span> <span>Narang</span></div>
+      <div class="pre-bar"><i id="preBar"></i></div>
+      <div class="pre-count"><span id="preCount">0</span>%</div>
+    </div>
+  </div>
+
+  <div class="ambient" aria-hidden="true"><i></i><i></i></div>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"><i></i></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a class="nav-logo magnetic" href="#hero" aria-label="Back to top"><span>SN</span></a>
+    <nav class="nav-pill" aria-label="Primary">
+      <i class="nav-ind" id="navInd"></i>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#experience" data-nav="experience">Experience</a>
+      <a href="#projects" data-nav="projects">Projects</a>
+      <a href="#skills" data-nav="skills">Skills</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+    <a class="nav-cta magnetic" href="#contact"><span>Let’s talk</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="hero" class="hero" data-section="hero">
+      <div class="hero-inner">
+        <p class="eyebrow hero-fade"><span class="dot"></span>Software Engineer · IIT Roorkee · 4+ years</p>
+        <h1 class="hero-title" aria-label="Sameer Narang">
+          <span class="mask"><span class="line">Sameer</span></span>
+          <span class="mask"><span class="line grad">Narang</span></span>
+        </h1>
+        <p class="hero-role hero-fade">
+          I build <span class="rotator" id="rotator"><span class="rot-word">real‑time fintech dashboards</span></span>
+        </p>
+        <p class="hero-sub hero-fade">Full‑stack engineer crafting fast, secure and beautiful products — from trading‑infrastructure consoles and Rust microservices to Flutter and React apps that run entire communities.</p>
+        <div class="hero-cta hero-fade">
+          <a class="btn btn-primary magnetic" href="#projects"><span>Explore my work</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost magnetic" href="#contact"><span>Get in touch</span></a>
+        </div>
+        <ul class="hero-meta hero-fade">
+          <li><b data-count="4.8" data-decimals="1">0</b><span>years building products</span></li>
+          <li><b data-count="880" data-suffix="+">0</b><span>volunteers on my platform</span></li>
+          <li><b data-count="166" data-prefix="AIR ">0</b><span>GATE 2019 rank</span></li>
+        </ul>
+      </div>
+      <div class="scroll-cue hero-fade" aria-hidden="true"><span>Scroll</span><i></i></div>
+    </section>
+
+    <!-- Tech marquee -->
+    <section class="marquee" aria-label="Technologies">
+      <div class="marquee-row" data-dir="1"><div class="marquee-track" id="mq1"></div></div>
+      <div class="marquee-row" data-dir="-1"><div class="marquee-track" id="mq2"></div></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about" data-section="about">
+      <div class="container about-grid">
+        <div class="about-photo" data-reveal>
+          <div class="photo-card tilt">
+            <div class="photo-glow"></div>
+            <img src="./img/sameer.webp" alt="Portrait of Sameer Narang" width="600" height="768" loading="lazy" />
+            <span class="chip-float f1">IIT Roorkee · M.Tech</span>
+            <span class="chip-float f2">GATE 2019 · AIR 166</span>
+            <span class="chip-float f3">Full‑Stack · Fintech</span>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p class="kicker" data-reveal>01 — About</p>
+          <h2 class="split h2">Engineer by training, product builder by obsession.</h2>
+          <p class="lead" data-reveal>I’m Sameer — a full‑stack software engineer with 4+ years of experience shipping production web platforms, real‑time dashboards and backend services. Today I work in fintech and trading infrastructure at <strong>WhiteBeard</strong>, helping power an AI‑driven risk‑management platform for MetaTrader 5 brokers.</p>
+          <p data-reveal>My path started in electronics — a B.Tech in Electronics &amp; Communication and an M.Tech in Microelectronics &amp; VLSI from IIT Roorkee — and moved into software, where I enjoy owning features end‑to‑end: shaping the data model, building the API, polishing the UI and shipping it with Docker and AWS.</p>
+          <p data-reveal>Beyond my day job I build full‑stack platforms for a Monastery/Ashram — a volunteer directory used to run 880+ volunteers and an expense approval system with multi‑level review and payments — which keeps me close to real users and real‑world constraints.</p>
+          <ul class="about-points" data-reveal>
+            <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg>Owning features from design to release</li>
+            <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg>Reactive, secure and observable backends</li>
+            <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg>Responsive UIs on web &amp; mobile</li>
+            <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg>Clear communication with product teams</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container stats" data-reveal>
+        <div class="stat"><b data-count="4.8" data-decimals="1">0</b><span>Years of experience</span></div>
+        <div class="stat"><b data-count="880" data-suffix="+">0</b><span>Volunteers managed on one platform</span></div>
+        <div class="stat"><b data-count="6" data-suffix="">0</b><span>Projects delivered end‑to‑end</span></div>
+        <div class="stat"><b data-count="3" data-suffix="">0</b><span>Roles across fintech, ad‑tech &amp; energy</span></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section experience" data-section="experience">
+      <div class="container">
+        <p class="kicker" data-reveal>02 — Experience</p>
+        <h2 class="split h2">Where I’ve been building.</h2>
+
+        <div class="timeline" id="timeline">
+          <i class="tl-line"><b id="tlFill"></b></i>
+
+          <!-- WhiteBeard -->
+          <article class="job job-main" data-reveal>
+            <span class="tl-dot"></span>
+            <header class="job-head">
+              <div>
+                <p class="job-when">Oct 2025 — Present</p>
+                <h3 class="job-title">Software Engineer <em>@ WhiteBeard</em></h3>
+                <p class="job-tag">AI‑driven risk management for MetaTrader 5 brokers · Fintech &amp; trading infrastructure</p>
+              </div>
+              <span class="badge-live"><i></i>Current</span>
+            </header>
+            <p class="job-lead">I build software for an AI‑driven risk‑management platform used by MetaTrader 5 brokers — internal tools, backend services and client‑facing applications, across the full stack.</p>
+
+            <div class="wb-grid">
+              <div class="wb-card tilt">
+                <span class="wb-num">01</span>
+                <h4>Internal operations dashboard</h4>
+                <p>A web console that gives the team a single, real‑time view of how the platform is running.</p>
+                <ul>
+                  <li>Monitoring, analytics and reporting views built with Next.js and TypeScript</li>
+                  <li>Performance, reliability and responsive‑design improvements, shipped with Docker and CI/CD</li>
+                </ul>
+                <div class="chips"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker</span></div>
+              </div>
+
+              <div class="wb-card tilt">
+                <span class="wb-num">02</span>
+                <h4>Backend services</h4>
+                <p>Contributing to the backend services that handle data in real time.</p>
+                <ul>
+                  <li>Worked on Rust microservices — features, fixes, testing and deployment scripts</li>
+                  <li>Wrote developer documentation and secure client authentication</li>
+                </ul>
+                <div class="chips"><span>Rust</span><span>Microservices</span><span>PostgreSQL</span></div>
+              </div>
+
+              <div class="wb-card wb-wide tilt">
+                <span class="wb-num">03</span>
+                <h4>Client onboarding application</h4>
+                <p>A guided KYC / KYB onboarding flow for brokerage clients — a Next.js / React front end with a Node.js, Express and PostgreSQL back end, containerised with Docker.</p>
+                <ul>
+                  <li>Step‑by‑step questionnaire and document collection with progress tracking</li>
+                  <li>AI‑assisted document verification and end‑to‑end testing</li>
+                </ul>
+                <div class="chips"><span>Next.js</span><span>React</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Docker</span></div>
+              </div>
+
+              <div class="wb-card tilt">
+                <span class="wb-num">04</span>
+                <h4>Database management</h4>
+                <p>Designing and looking after the PostgreSQL databases behind the platform’s tools and services.</p>
+                <ul>
+                  <li>Schema design and versioned migrations with Prisma, including data migrations and backfills</li>
+                  <li>Query and index tuning to keep dashboards and analytics responsive</li>
+                  <li>Managing databases across environments on AWS RDS — access, upgrades and day‑to‑day operations</li>
+                </ul>
+                <div class="chips"><span>PostgreSQL</span><span>Prisma</span><span>SQL</span><span>Migrations</span><span>AWS RDS</span></div>
+              </div>
+
+              <div class="wb-card tilt">
+                <span class="wb-num">05</span>
+                <h4>AWS deployment &amp; infrastructure</h4>
+                <p>Packaging, deploying and operating services on AWS.</p>
+                <ul>
+                  <li>Docker images published to <b>ECR</b> and deployed on <b>ECS</b> through task definitions and services</li>
+                  <li>Scheduled and event‑driven jobs with <b>EventBridge</b></li>
+                  <li><b>IAM</b> roles and policies for secure service‑to‑service access; <b>RDS</b> for managed databases</li>
+                  <li>CI/CD pipelines and deployment scripts for repeatable releases</li>
+                </ul>
+                <div class="chips"><span>ECR</span><span>ECS</span><span>EventBridge</span><span>IAM</span><span>Task definitions</span><span>RDS</span><span>CI/CD</span></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Blockboard -->
+          <article class="job" data-reveal>
+            <span class="tl-dot"></span>
+            <header class="job-head">
+              <div>
+                <p class="job-when">Nov 2022 — Sep 2025</p>
+                <h3 class="job-title">Software Engineer <em>@ Blockboard</em></h3>
+                <p class="job-tag">Ad‑tech platform · Payroll company: Spino Technologies Pvt. Ltd.</p>
+              </div>
+            </header>
+            <p class="job-lead">Full‑stack engineer on an advertisement‑domain web platform that tracks campaigns, monitors their performance and makes predictions to help advertisers decide where to spend.</p>
+            <ul class="job-list">
+              <li>Built frontend and backend components for campaign tracking and performance monitoring</li>
+              <li>Designed and developed APIs and backend modules powering the platform’s data and reporting</li>
+              <li>Wrote SQL stored procedures to process and serve large volumes of campaign data efficiently</li>
+            </ul>
+            <div class="chips"><span>Full‑stack</span><span>REST APIs</span><span>SQL &amp; stored procedures</span><span>Data‑driven features</span></div>
+          </article>
+
+          <!-- Kongsberg -->
+          <article class="job" data-reveal>
+            <span class="tl-dot"></span>
+            <header class="job-head">
+              <div>
+                <p class="job-when">Feb 2022 — Oct 2022</p>
+                <h3 class="job-title">Development Engineer – L1 <em>@ Kongsberg Digital</em></h3>
+                <p class="job-tag">Industrial software · Energy &amp; power plants</p>
+              </div>
+            </header>
+            <p class="job-lead">Frontend developer on <strong>KogniTwin</strong>, a remote‑monitoring software for power plants that eases automation, reduces the need for on‑site personnel and tracks potential failures so they can be prevented in advance.</p>
+            <ul class="job-list">
+              <li>Developed frontend components for a data‑heavy industrial monitoring application</li>
+              <li>Turned complex plant and equipment data into clear, usable screens for operators</li>
+            </ul>
+            <div class="chips"><span>Frontend</span><span>Industrial monitoring</span><span>Enterprise delivery</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects" data-section="projects">
+      <div class="container">
+        <p class="kicker" data-reveal>03 — Featured projects</p>
+        <h2 class="split h2">Platforms that run real communities.</h2>
+        <p class="lead narrow" data-reveal>Two full‑stack products I designed and built end‑to‑end for a Monastery/Ashram. Every screenshot below was captured from the running apps using <strong>synthetic sample data</strong> — no real personal information is shown.</p>
+      </div>
+
+      <!-- Project 1 -->
+      <article class="project" id="project-sd">
+        <div class="container">
+          <header class="proj-head" data-reveal>
+            <span class="proj-index">P1</span>
+            <div>
+              <h3 class="proj-title">Sewadaar Directory</h3>
+              <p class="proj-tag">Volunteer &amp; devotional‑service management platform for a Monastery/Ashram</p>
+            </div>
+            <div class="chips big"><span>Flutter</span><span>Dart</span><span>Kotlin</span><span>Spring WebFlux</span><span>R2DBC</span><span>PostgreSQL</span><span>AWS S3</span><span>Docker</span><span>JWT</span></div>
+          </header>
+
+          <div class="proj-cols">
+            <div class="proj-story" data-reveal>
+              <h4>The problem</h4>
+              <p>Volunteers (<em>sewadaars</em>) serve in many daily <em>devotional‑service duties</em> (<em>sewas</em>) — gates, halls, kitchens, medical desks, security. Coordination ran on spreadsheets and messages, so nobody had one trustworthy view of who serves where and when.</p>
+              <h4>The solution</h4>
+              <p>A single secure system of record: a reactive Kotlin / Spring WebFlux API with PostgreSQL and a Flutter client for web and mobile. It manages <b>880+ volunteers</b>, their photos and documents, and their assignments to duties with explicit <b>coordinator</b> and <b>volunteer</b> roles.</p>
+              <h4>My role</h4>
+              <p>Sole engineer — data model, backend, API security, Flutter UI, S3 storage, Docker environment and release.</p>
+            </div>
+            <div class="proj-feats" data-reveal>
+              <h4>What I built</h4>
+              <ul class="feat-list">
+                <li><b>Duty &amp; volunteer management</b> with per‑assignment time windows validated against the duty’s hours</li>
+                <li><b>Schedule (roster) view</b> — a colour‑coded daily timeline across morning, afternoon, evening and night</li>
+                <li><b>Approval workflow</b> for new volunteers: pending approval → document verification → active, with enforced transitions</li>
+                <li><b>Secure photo &amp; document storage</b> on AWS S3 using time‑limited presigned URLs</li>
+                <li><b>Bilingual PDF generation</b> — English / Hindi declaration &amp; affidavit documents</li>
+                <li><b>Search, filters &amp; pagination</b> over names, phones, skills and status</li>
+                <li><b>Responsive Flutter UI</b> — split‑pane on desktop, full‑screen flows on mobile</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="hl-grid" data-reveal>
+            <div class="hl tilt"><span>Security</span><h5>Server‑enforced role‑based visibility</h5><p>Coordinators see only the duties and volunteers they manage; admins see everything. Rules live in the API and SQL queries — not just the UI — so changing IDs or parameters can’t bypass them.</p></div>
+            <div class="hl tilt"><span>Auth</span><h5>JWT with refresh tokens &amp; single sessions</h5><p>Short‑lived access tokens, rotating refresh flow and single‑device session enforcement, with roles resolved on every request.</p></div>
+            <div class="hl tilt"><span>Backend</span><h5>Reactive &amp; parameter‑safe</h5><p>Spring WebFlux + R2DBC end‑to‑end; dynamic search built with bound parameters and Postgres array operators.</p></div>
+            <div class="hl tilt"><span>DevOps</span><h5>Reproducible local stack</h5><p>Docker Compose with PostgreSQL and LocalStack S3, so the full photo/document path runs without cloud credentials.</p></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <p class="kicker small" data-reveal>Walkthrough — scroll to explore the app</p>
+          <div class="stepper" data-stepper="sd"></div>
+          <p class="kicker small" data-reveal>Mobile experience</p>
+          <div class="phones" data-phones="sd"></div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project" id="project-ex">
+        <div class="container">
+          <header class="proj-head" data-reveal>
+            <span class="proj-index">P2</span>
+            <div>
+              <h3 class="proj-title">Monastery/Ashram Expense Manager</h3>
+              <p class="proj-tag">Expense request, multi‑level approval &amp; disbursement platform</p>
+            </div>
+            <div class="chips big"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>MUI</span><span>Kotlin</span><span>Spring WebFlux</span><span>PostgreSQL</span><span>Flyway</span><span>AWS S3</span><span>Docker</span></div>
+          </header>
+
+          <div class="proj-cols">
+            <div class="proj-story" data-reveal>
+              <h4>The problem</h4>
+              <p>Saints’ everyday expenses — groceries, medicines, travel, repairs, festival material — were requested informally and paid from a shared fund, with little traceability about who approved what, how much was actually paid and when.</p>
+              <h4>The solution</h4>
+              <p>A full‑stack platform that digitises the whole request‑to‑payout cycle. Volunteers raise itemised cases on behalf of saints, <b>admins review line‑by‑line</b>, and a <b>super admin gives final approval and records payments</b> — fully or in instalments — leaving a clear audit trail at every step.</p>
+              <h4>My role</h4>
+              <p>Sole engineer — database schema and migrations, reactive backend, role‑based workflow, React UI, charts and reports, scheduler and Docker deployment.</p>
+            </div>
+            <div class="proj-feats" data-reveal>
+              <h4>What I built</h4>
+              <ul class="feat-list">
+                <li><b>Three‑stage workflow</b> — Volunteer creates → Admin claims &amp; reviews → Super Admin approves &amp; pays</li>
+                <li><b>Item‑level decisions</b> — approve, partially approve or reject each line with its own amount</li>
+                <li><b>Disbursement tracking</b> — cash, bank transfer or UPI with references; status moves to partially/fully disbursed automatically</li>
+                <li><b>Automated recurring cases</b> — an hourly scheduler spawns monthly templates with correct IST/UTC handling</li>
+                <li><b>Reports &amp; analytics</b> — spend trend, category doughnut, saint‑wise cases, volume ranking, category buckets, aggregated payments</li>
+                <li><b>Notifications, user management, category taxonomy</b> and saint profiles with documents</li>
+                <li><b>Installable PWA</b> with a responsive layout for phones</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flow" data-reveal aria-label="Approval workflow">
+            <div class="flow-step"><b>1</b><h5>Volunteer</h5><p>Creates an itemised case for a saint with category, vendor, urgency and bills</p></div>
+            <i class="flow-arrow"></i>
+            <div class="flow-step"><b>2</b><h5>Admin</h5><p>Claims the case and approves, partially approves or rejects each line</p></div>
+            <i class="flow-arrow"></i>
+            <div class="flow-step"><b>3</b><h5>Super Admin</h5><p>Gives final approval and records one or more payments</p></div>
+            <i class="flow-arrow"></i>
+            <div class="flow-step done"><b>✓</b><h5>Disbursed</h5><p>Totals reconcile, notifications fire, reports update</p></div>
+          </div>
+
+          <div class="hl-grid" data-reveal>
+            <div class="hl tilt"><span>Workflow</span><h5>State machine with guarded transitions</h5><p>Statuses (Created → Submitted → Admin‑approved → Super‑admin‑approved → Partially / Fully disbursed, or Rejected) are enforced server‑side per role.</p></div>
+            <div class="hl tilt"><span>Data</span><h5>Versioned schema with Flyway</h5><p>Nine incremental migrations — enums, soft deletes, deadlines, item‑level attachments — keep every environment in lock‑step.</p></div>
+            <div class="hl tilt"><span>Automation</span><h5>Timezone‑correct scheduler</h5><p>Recurring templates fire at an IST hour, store UTC, and advance month‑by‑month — a subtle bug fixed after tracing a 5½‑hour drift.</p></div>
+            <div class="hl tilt"><span>Storage</span><h5>S3 or local, behind one interface</h5><p>A storage abstraction swaps S3 for the filesystem in dev, so uploads work everywhere with zero code changes.</p></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <p class="kicker small" data-reveal>Walkthrough — scroll to explore the app</p>
+          <div class="stepper" data-stepper="ex"></div>
+          <p class="kicker small" data-reveal>Mobile experience</p>
+          <div class="phones" data-phones="ex"></div>
+        </div>
+      </article>
+
+      <!-- Other projects -->
+      <div class="container">
+        <p class="kicker" data-reveal>More work</p>
+        <div class="other-grid">
+          <article class="other tilt" data-reveal>
+            <span class="o-num">01</span>
+            <h4>Ehomespun — e‑commerce marketplace</h4>
+            <p>Designed and built the frontend and backend of a marketplace website for a freelance client, deployed on DigitalOcean Linux servers behind Nginx and Gunicorn.</p>
+            <div class="chips"><span>Python</span><span>Django</span><span>Django REST</span><span>Jinja</span><span>Nginx</span><span>Gunicorn</span><span>SQLite</span></div>
+          </article>
+          <article class="other tilt" data-reveal>
+            <span class="o-num">02</span>
+            <h4>Services‑aggregator mobile app</h4>
+            <p>Built and published on the Google Play Store a mobile app for a local client’s JustDial‑style services website, giving the business a mobile channel to reach more customers.</p>
+            <div class="chips"><span>React Native</span><span>JavaScript</span><span>TypeScript</span><span>Redux</span><span>Play Store</span></div>
+          </article>
+          <article class="other tilt" data-reveal>
+            <span class="o-num">03</span>
+            <h4>School Database Management APIs</h4>
+            <p>Developed the backend REST APIs for a school database management system covering students, staff and records.</p>
+            <div class="chips"><span>Python</span><span>Django REST</span><span>SQLite</span></div>
+          </article>
+          <article class="other tilt" data-reveal>
+            <span class="o-num">04</span>
+            <h4>Website clones for frontend practice</h4>
+            <p>Recreated homepages of Trivago, DigitalOcean and WooCommerce pixel‑by‑pixel to sharpen layout, responsiveness and CSS craft.</p>
+            <div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills" data-section="skills">
+      <div class="container">
+        <p class="kicker" data-reveal>04 — Skills</p>
+        <h2 class="split h2">A toolbox built across the stack.</h2>
+        <div class="skill-grid">
+          <div class="skill-card tilt" data-reveal><h4>Languages</h4><div class="chips"><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>Kotlin</span><span>Rust</span><span>Java</span><span>Dart</span><span>C</span><span>C++</span><span>SQL</span><span>HTML5</span><span>CSS3</span></div></div>
+          <div class="skill-card tilt" data-reveal><h4>Frontend &amp; Mobile</h4><div class="chips"><span>React.js</span><span>Next.js</span><span>Angular</span><span>Vue.js</span><span>Flutter</span><span>React Native</span><span>Material UI</span><span>Bootstrap</span><span>Redux</span></div></div>
+          <div class="skill-card tilt" data-reveal><h4>Backend</h4><div class="chips"><span>Spring Boot</span><span>Spring WebFlux</span><span>Node.js</span><span>Express.js</span><span>Django</span><span>Django REST</span><span>Hibernate</span><span>JDBC</span><span>Prisma</span><span>REST APIs</span></div></div>
+          <div class="skill-card tilt" data-reveal><h4>Databases</h4><div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>MSSQL</span><span>MongoDB</span><span>R2DBC</span><span>Flyway</span></div></div>
+          <div class="skill-card tilt" data-reveal><h4>Cloud &amp; DevOps</h4><div class="chips"><span>AWS</span><span>Docker</span><span>CI/CD</span><span>GitHub Actions</span><span>Nginx</span><span>Linux</span><span>Datadog</span></div></div>
+          <div class="skill-card tilt" data-reveal><h4>Practices</h4><div class="chips"><span>Data Structures &amp; Algorithms</span><span>JWT &amp; RBAC</span><span>System design</span><span>Agile</span><span>Scrum</span><span>Git</span><span>Figma / Canva</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section education" data-section="education">
+      <div class="container">
+        <p class="kicker" data-reveal>05 — Education &amp; achievements</p>
+        <h2 class="split h2">Strong foundations.</h2>
+        <div class="edu-grid">
+          <article class="edu tilt" data-reveal>
+            <span class="edu-when">Jul 2019 — Jun 2021</span>
+            <h4>Indian Institute of Technology Roorkee</h4>
+            <p>M.Tech · Microelectronics and VLSI</p>
+            <b class="edu-score">CGPA 8.788</b>
+          </article>
+          <article class="edu tilt" data-reveal>
+            <span class="edu-when">Jun 2014 — Apr 2018</span>
+            <h4>Dharmsinh Desai University</h4>
+            <p>B.Tech · Electronics and Communication Engineering</p>
+            <b class="edu-score">CGPA 8.45</b>
+          </article>
+          <article class="edu tilt" data-reveal>
+            <span class="edu-when">CBSE · Class XII</span>
+            <h4>New Era Senior Secondary School, Vadodara</h4>
+            <p>Senior Secondary</p>
+            <b class="edu-score">84.2%</b>
+          </article>
+          <article class="edu tilt" data-reveal>
+            <span class="edu-when">CBSE · Class X</span>
+            <h4>New Era Senior Secondary School, Vadodara</h4>
+            <p>Secondary</p>
+            <b class="edu-score">CGPA 9.6</b>
+          </article>
+        </div>
+        <div class="achieve" data-reveal>
+          <div class="trophy"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div>
+          <div><h4>GATE 2019 — All India Rank 166</h4><p>Ranked among the top performers nationwide in the Graduate Aptitude Test in Engineering.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact" data-section="contact">
+      <div class="container contact-inner">
+        <p class="kicker" data-reveal>06 — Contact</p>
+        <h2 class="split h1-big">Let’s build something remarkable.</h2>
+        <p class="lead narrow" data-reveal>Have a product to ship, a platform to scale or a team to strengthen? I’d love to hear about it.</p>
+        <a class="mail-link magnetic" href="mailto:samre1234@gmail.com" data-reveal><span id="mailText">samre1234@gmail.com</span><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="contact-actions" data-reveal>
+          <button class="btn btn-ghost magnetic" id="copyMail" type="button"><span>Copy email</span></button>
+          <a class="btn btn-ghost magnetic" href="tel:+917453041355" aria-label="Call main number +91 74530 41355"><span><small class="ph-tag">Main</small> +91 74530 41355</span></a>
+          <a class="btn btn-ghost magnetic" href="tel:+918447004169" aria-label="Call alternate number +91 84470 04169"><span><small class="ph-tag">Alternate</small> +91 84470 04169</span></a>
+          <a class="btn btn-ghost magnetic" href="https://github.com/sameernarang1234" target="_blank" rel="noopener"><span>GitHub</span></a>
+          <a class="btn btn-ghost magnetic" href="https://www.linkedin.com/in/sameer-narang-9601211b5/" target="_blank" rel="noopener"><span>LinkedIn</span></a>
+        </div>
+      </div>
+      <footer class="footer">
+        <span>© 2026 Sameer Rakesh Narang</span>
+        <span>Designed &amp; built with Three.js, GSAP &amp; Lenis</span>
+        <a href="#hero" class="magnetic">Back to top ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer" hidden>
+    <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+    <button class="lb-nav prev" id="lbPrev" aria-label="Previous">‹</button>
+    <figure><img id="lbImg" alt="" /><figcaption id="lbCap"></figcaption></figure>
+    <button class="lb-nav next" id="lbNext" aria-label="Next">›</button>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p style="position:fixed;bottom:0;left:0;padding:12px;background:#111;color:#fff;z-index:9999">Please enable JavaScript to experience the interactive portfolio.</p></noscript>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

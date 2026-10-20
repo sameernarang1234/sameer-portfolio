@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+.env.*
+.vercel
+*.log
+.DS_Store
+# local demo-data tooling (contains demo logins / local paths) – not part of the site
+demo-tooling/
