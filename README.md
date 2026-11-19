@@ -20,7 +20,7 @@ npm run preview    # serve the production build on :4173
 - Screenshots: `public/img/*.webp`
 
 ## Screenshots & sample data
-All screenshots of **Sewadaar Directory** and the **Monastery/Ashram Expense Manager** were captured from the
+All screenshots of **Sewadaar Directory**, the **Monastery/Ashram Expense Manager** and **ACME Salary Management** were captured from the
 running apps using fully synthetic sample data (no production data). The generators/seeders and the Playwright
 capture scripts live in `demo-tooling/` (they expect the demo Docker stacks to be running).
 

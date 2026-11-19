@@ -48,6 +48,30 @@ export const PROJECTS = {
       { img: 'ex-m-sa-review', t: 'Super admin · review' },
     ],
   },
+  sm: {
+    ar: 1800 / 1125,
+    url: 'acme-salary.app / demo',
+    steps: [
+      { img: 'sm-login', t: 'HR Manager sign‑in', d: 'A single account with server‑side sessions in an HttpOnly, Secure, SameSite=Strict cookie; every API route checks it.' },
+      { img: 'sm-insights-overview', t: 'How ACME pays people', d: 'Headcount, total annual payroll and median salary in USD, with the salary distribution across 9,500+ active employees.' },
+      { img: 'sm-insights-country', t: 'Pay by country', d: 'Headcount, median, average and range in local currency, plus average and total cost in USD — most expensive first.' },
+      { img: 'sm-insights-jobtitle', t: 'Pay by job title within a country', d: 'Benchmark offers and spot outliers: headcount, median, average and range for every role in the chosen country.' },
+      { img: 'sm-insights-department', t: 'Cost by department', d: 'Total annual cost in USD per department, charted and tabulated for budget discussions.' },
+      { img: 'sm-employees', t: 'Employee directory', d: 'Server‑side search, filters, sorting and paging over 10,000 employees, with each salary in local currency and USD.' },
+      { img: 'sm-employees-filtered', t: 'Multi‑select filters & salary sort', d: 'Pick several countries, departments or job titles and sort by annual salary, compared fairly in USD. Filters live in the URL.' },
+      { img: 'sm-employees-former', t: 'Former employees, kept', d: 'Leavers are marked, not deleted — their record, last working day and salary history stay available.' },
+      { img: 'sm-details', t: 'Salary breakdown', d: 'Each salary is built from components (Basic plus allowances); the total is computed, never stored, with its USD equivalent.' },
+      { img: 'sm-details-history', t: 'Append‑only salary history', d: 'Every increment, promotion or correction with old → new amounts and the % change; entries cannot be edited or deleted.' },
+      { img: 'sm-change-salary', t: 'Change salary in one form', d: 'Edit components, pick a reason and effective date; the components and the history entry are saved in one transaction.' },
+      { img: 'sm-add-employee', t: 'Validated add‑employee form', d: 'Required fields, unique email, known country and valid components — checked in the browser and again on the server.' },
+    ],
+    phones: [
+      { img: 'sm-m-insights', t: 'Pay insights' },
+      { img: 'sm-m-employees', t: 'Employees' },
+      { img: 'sm-m-details', t: 'Employee' },
+      { img: 'sm-m-history', t: 'Salary history' },
+    ],
+  },
 };
 
 export function renderProjects() {

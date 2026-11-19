@@ -234,7 +234,7 @@
       <div class="container">
         <p class="kicker" data-reveal>03 — Featured projects</p>
         <h2 class="split h2">Platforms that run real communities.</h2>
-        <p class="lead narrow" data-reveal>Two full‑stack products I designed and built end‑to‑end for a Monastery/Ashram. Every screenshot below was captured from the running apps using <strong>synthetic sample data</strong> — no real personal information is shown.</p>
+        <p class="lead narrow" data-reveal>Two full‑stack products I designed and built end‑to‑end for a Monastery/Ashram, and a salary management platform for 10,000 employees. Every screenshot below was captured from the running apps using <strong>synthetic sample data</strong> — no real personal information is shown.</p>
       </div>
 
       <!-- Project 1 -->
@@ -346,6 +346,67 @@
           <div class="stepper" data-stepper="ex"></div>
           <p class="kicker small" data-reveal>Mobile experience</p>
           <div class="phones" data-phones="ex"></div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project" id="project-sm">
+        <div class="container">
+          <header class="proj-head" data-reveal>
+            <span class="proj-index">P3</span>
+            <div>
+              <h3 class="proj-title">ACME Salary Management</h3>
+              <p class="proj-tag">Salary records, history &amp; pay insights for an HR Manager — 10,000 employees across 10 countries</p>
+            </div>
+            <div class="chips big"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>MUI</span><span>Redux Toolkit</span><span>Node.js</span><span>Express 5</span><span>Prisma</span><span>PostgreSQL</span><span>Docker</span><span>AWS EC2</span><span>AWS RDS</span></div>
+          </header>
+
+          <div class="proj-cols">
+            <div class="proj-story" data-reveal>
+              <h4>The problem</h4>
+              <p>ACME’s HR team managed salary data for 10,000 employees in several countries through spreadsheets — slow, error‑prone, with no reliable record of how each person’s pay had changed, and no quick answer to questions like “What do we pay a Software Engineer in India?”</p>
+              <h4>The solution</h4>
+              <p>A web application for the HR Manager: find any employee in seconds, update a salary in one form with <b>every change logged in an append‑only history</b>, and <b>answer pay questions from one insights screen</b> — salaries kept in local currency and compared in USD.</p>
+              <h4>My role</h4>
+              <p>Sole engineer — requirements and plan written first, then a test‑first build in small commits: data model, API, React UI and deployment to AWS. Built with an AI coding agent (Claude Code), with every prompt logged in the repository.</p>
+            </div>
+            <div class="proj-feats" data-reveal>
+              <h4>What I built</h4>
+              <ul class="feat-list">
+                <li><b>Employee directory</b> over 10,000 records — server‑side search, multi‑select filters, current / former / all, salary sort in USD, paging and CSV export</li>
+                <li><b>Salary components</b> (Basic plus allowances) with totals computed in SQL, never stored</li>
+                <li><b>Append‑only salary history</b> — old and new components, reason and effective date for every change</li>
+                <li><b>Mark as left instead of deleting</b> — former employees stay listed with their last working day</li>
+                <li><b>Pay insights</b> — headcount, payroll, median, salary distribution, pay by country, by job title within a country and cost by department</li>
+                <li><b>Local currencies</b> with a dated USD reference rate shown in the UI</li>
+                <li><b>Responsive UI</b> — tables on desktop, cards on phones</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flow" data-reveal aria-label="Salary change flow">
+            <div class="flow-step"><b>1</b><h5>Edit</h5><p>Change any salary component, then pick a reason and an effective date</p></div>
+            <i class="flow-arrow"></i>
+            <div class="flow-step"><b>2</b><h5>Validate</h5><p>The server checks every component — Basic required, whole positive amounts</p></div>
+            <i class="flow-arrow"></i>
+            <div class="flow-step"><b>3</b><h5>Save</h5><p>Components and the history entry are written in one database transaction</p></div>
+            <i class="flow-arrow"></i>
+            <div class="flow-step done"><b>✓</b><h5>Recorded</h5><p>History, directory and insights update; the entry can never be edited</p></div>
+          </div>
+
+          <div class="hl-grid" data-reveal>
+            <div class="hl tilt"><span>Data</span><h5>Rules enforced by PostgreSQL</h5><p>CHECK constraints, triggers that reject edits and deletes of salary history, and case‑insensitive unique emails — so the rules hold even if application code gets them wrong.</p></div>
+            <div class="hl tilt"><span>Testing</span><h5>Test‑first, against a real database</h5><p>Hundreds of fast, deterministic tests: backend tests run against a real PostgreSQL test database, UI tests against a mocked API (MSW).</p></div>
+            <div class="hl tilt"><span>Performance</span><h5>Tens of milliseconds at 10,000 rows</h5><p>The directory is one parameterised SQL query with allow‑listed sorting and indexes — 23–58 ms over 10,000 employees.</p></div>
+            <div class="hl tilt"><span>DevOps</span><h5>HTTPS on EC2, private RDS</h5><p>One Docker image behind Caddy with automatic HTTPS; the database is private and reached over TLS verified against Amazon’s certificate authorities.</p></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <p class="kicker small" data-reveal>Walkthrough — scroll to explore the app</p>
+          <div class="stepper" data-stepper="sm"></div>
+          <p class="kicker small" data-reveal>Mobile experience</p>
+          <div class="phones" data-phones="sm"></div>
         </div>
       </article>
 
